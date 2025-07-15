@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Neue', cursive;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  animation: slideInTop 1.5s ease-in-out;
+}
+
+p {
+  font-size: 1.2em;
+  max-width: 90%;
+  animation: slideInBottom 1.5s ease-in-out;
+}
+
+button {
+  margin-top: 2em;
+  padding: 15px 35px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite, fadeInUp 2s ease;
+  transition: all 0.4s ease;
+  font-family: 'Comic Neue', cursive;
+}
+
+button:hover {
+  transform: scale(1.1) rotate(1deg);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+.cake-image {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.birthday-message {
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffeaa7;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: sparkle 2s infinite alternate;
+}
+
+/* Animations */
+@keyframes sparkle {
+  0% { box-shadow: 0 0 10px #fcd5ce; }
+  100% { box-shadow: 0 0 20px #ff9ff3; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInTop {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInBottom {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
